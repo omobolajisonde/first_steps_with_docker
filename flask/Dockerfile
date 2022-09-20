@@ -1,0 +1,11 @@
+FROM python:3.10.7-slim-buster
+
+COPY . /app
+WORKDIR /app
+
+RUN pip install --upgrade pip
+RUN pip install flask
+
+
+ENTRYPOINT ["python", "app.py"]
+
